@@ -55,7 +55,7 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 ### 2) Clone the configuration
 
 ```
-git clone https://github.com/ChrisTitusTech/material-awesome.git ~/.config/awesome
+git clone https://github.com/ninja8247/material-awesome.git ~/.config/awesome
 ```
 
 ### 3) Set the themes

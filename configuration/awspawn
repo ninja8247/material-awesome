@@ -8,12 +8,14 @@
 
 # List of applications to run
 APPS=(
-    barrier
+    #barrier
+    #QT_QPA_PLATFORMTHEME=gnome klipper
+    #klipper
     )
 
 # Some applications start child applications that need to be killed on reload
 KILL=(
-    barriers
+    #barriers
     )
 
 # First kill lingering apps

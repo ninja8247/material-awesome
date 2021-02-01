@@ -371,20 +371,21 @@ local globalKeys =
       awful.util.spawn_with_shell('mate-system-monitor')
     end
   ),
-  -- Kill VLC
+  --[[ Kill VLC
   awful.key(
     {modkey},
     'v',
     function()
       awful.util.spawn_with_shell('killall -9 vlc')
     end
-  ),
+  ),--]]
   -- File Manager
   awful.key(
     {modkey},
     'e',
     function()
       awful.util.spawn(apps.default.files)
+      --awful.util.spawn_with_shell('pcmanfm')
     end,
     {description = 'filebrowser', group = 'hotkeys'}
   ),
@@ -468,6 +469,17 @@ for i = 1, 9 do
       end,
       descr_toggle_focus
     )
+	--[[ Custom
+	awful.key(
+	  {modkey, "Control" }, "Return",
+	  function (c)
+        c.fullscreen = not c.fullscreen
+        c:raise()
+      end,
+	  function () swap(awful.client.getmaster())
+	  end,
+      {description = "move to master", group = "client"}
+	)--]]
   )
 end
 

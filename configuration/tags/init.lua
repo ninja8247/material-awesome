@@ -13,7 +13,7 @@ local tags = {
   {
     icon = icons.code,
     type = 'code',
-    defaultApp = apps.default.editor,
+    defaultApp = apps.default.terminal,
     screen = 1
   },
   {
@@ -45,13 +45,21 @@ local tags = {
     type = 'any',
     defaultApp = apps.default.rofi,
     screen = 1
+  },
+  {
+    icon = icons.brain,
+    type = 'any',
+    defaultApp = apps.default.rofi,
+    screen = 1
   }
+  
 }
 
 awful.layout.layouts = {
+--awful.layout.suit.fair,
   awful.layout.suit.tile,
   awful.layout.suit.max,
-  awful.layout.suit.floating
+  awful.layout.suit.floating  
 }
 
 awful.screen.connect_for_each_screen(
@@ -63,6 +71,7 @@ awful.screen.connect_for_each_screen(
           icon = tag.icon,
           icon_only = true,
           layout = awful.layout.suit.tile,
+          --layout = awful.layout.suit.fair,
           gap_single_client = false,
           gap = 4,
           screen = s,

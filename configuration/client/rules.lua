@@ -37,11 +37,11 @@ awful.rules.rules = {
       ontop = true,
       floating = true,
       drawBackdrop = true,
-      shape = function()
-        return function(cr, w, h)
-          gears.shape.rounded_rect(cr, w, h, 8)
-        end
-      end,
+      --shape = function()
+      --  return function(cr, w, h)
+      --    gears.shape.rounded_rect(cr, w, h, 8)
+      --  end
+      --end,
       skip_decoration = true
     }
   }

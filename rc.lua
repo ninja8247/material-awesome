@@ -82,3 +82,6 @@ _G.client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
+
+--TEST
+--mytextclock = wibox.widget.textclock ("%a %b %d, %I:%M:%S %p")
